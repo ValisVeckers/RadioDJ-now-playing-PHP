@@ -17,6 +17,15 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Error logs
+*.log
+
+# Backup files
+*.bak
+
+# Album art directory
+album_art/
+
 # =========================
 # Operating System Files
 # =========================

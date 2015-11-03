@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>How to use this package with RadioDJ Web Exporter</title>
+	<style>
+	html, body {
+		margin:0;
+		padding:0;
+		font: 14px/normal 'Open Sans', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+	}
+	main, article, aside, section {
+		margin: 0.83em 0;
+	}
+	p {
+		margin: 0.3em 0 0.83em;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: lighter;
+		margin: 0.3em 0 0.83em;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	main {
+		display: block;
+		margin: 2em auto 3em;
+		width: 980px;
+	}
+	section {
+		margin: 0 auto 2em;
+	}
+	figure img {
+		margin: 0 auto 1em;
+	}
+	figure figcaption {
+		margin: 0 auto 0.75em;
+	}
+	code, pre {
+		background: #F8EEDB;
+		color: #221E3B;
+	}
+	pre {
+		padding: 0.3em 0.75em;
+		border-left: solid 3px #A899D8;
+	}
+	mark {
+		background-color: #3399FB;
+		color: #fff;
+	}
+	.btn {
+		background: #d6e6fc;
+		background: -moz-linear-gradient(top, #d6e6fc 0%, #93acd5 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6e6fc), color-stop(100%,#93acd5));
+		background: -webkit-linear-gradient(top, #d6e6fc 0%,#93acd5 100%);
+		background: -o-linear-gradient(top, #d6e6fc 0%,#93acd5 100%);
+		background: -ms-linear-gradient(top, #d6e6fc 0%,#93acd5 100%);
+		background: linear-gradient(to bottom, #d6e6fc 0%,#93acd5 100%);
+		padding: 0.5em 2em;
+		border: solid 1px #000;
+		display: inline-block;
+		text-transform: uppercase;
+	}
+	.btn-black {
+	background: #50555B;
+	background: -moz-linear-gradient(top,  #50555B 10%, #040404 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#50555B), color-stop(100%,#040404));
+	background: -webkit-linear-gradient(top,  #50555B 10%, #040404 100%);
+	background: -o-linear-gradient(top,  #50555B 10%, #040404 100%);
+	background: -ms-linear-gradient(top,  #50555B 10%, #040404 100%);
+	background: linear-gradient(to bottom,  #50555B 10%, #040404 100%);
+	padding: 1em;
+	color: #A9A8A6;
+	}
+	.note {
+		margin: 1em 0;
+		padding: 0.5em 0.6em;
+		border-left: solid 5px #A9EBB2;
+	}
+	.warning {
+		margin: 1em 0;
+		padding: 0.5em 0.6em;
+		border-left: 5px solid #FF7D7D;
+	}
+	blockquote {
+		margin: 0;
+		padding: 20px 25px;
+		border-left: 5px solid #ccc;
+		margin-bottom: 24px;
+		background: #eee;
+		position: relative;
+	}
+	blockquote p {
+		margin: 0.2em 0;
+	}
+	blockquote:after, blockquote:before {
+		color: #ccc;
+		font-size: 40px;
+		position: absolute;
+	}
+	blockquote:before {
+		top: 0;
+		left: 10px;
+		content: '\201C';
+	}
+	blockquote:after {
+		bottom: 0;
+		right: 10px;
+		content: '\201D';
+	}
+	</style>
+</head>
+<body>
+
+<main>
+	<section>
+	<h1>How to use this package with RadioDJ Web Exporter</h1>
+	<p>
+	First off, this package <strong>works</strong>!
+	If you follow these instructions to the letter and place everything properly, this will work "right out of the box".</p><p>
+	I am available on the <a href="http://www.radiodj.ro/community/index.php" title="RadioDJ Forums" target="_blank">RadioDJ forums</a> under the name <a href="http://www.radiodj.ro/community/index.php?action=profile;u=9919">Capt_Fuzzy</a> should you get stuck, but I stress again, <strong>if you follow these instructions to the letter</strong>, this will work with little editing on your part.
+	</p>
+
+	<h2>Let's get started, shall we?</h2>
+	<p>First, copy the contents of the 'Album-Art' folder from your RadioDJ directory, (usually located at C:\RadioDJ\Album-Art), to a new folder named 'album_art'. Once you have done this, upload your 'album_art' folder to your webserver now, or you can wait and upload all of this at once when we're finished, the choice is yours.<br />
+	Make sure the folder is named <code>album_art</code>, just the way you see it here!</p>
+	<p>Unpack the zip file where ever you choose but keep it all together for right now, just so it's easier to find everything.<br />
+	  The easier you make this on yourself, the easier it will be in general.
+	</p>
+	<blockquote cite="https://en.wikiquote.org/wiki/Star_Trek_III:_The_Search_for_Spock">
+		<p>The more you overthink the plumbing, the easier it is to stop up the drain</p>
+		<em>&ndash; Montgomery Scott</em>
+	</blockquote>
+
+	<p>Now that we have it unpacked, you should have five (5) files:
+		<ol>
+			<li>config.php</li>
+			<li>display.php</li>
+			<li>display.css</li>
+			<li>radiodj.php</li>
+			<li>radiodj.txt</li>
+		</ol>
+	To edit these files you should use <a href="http://www.flos-freeware.ch/notepad2.html">Notepad2</a>, <a href="https://notepad-plus-plus.org/">Notepad++</a> or some other editor that will preserve the format and not mess up character set encoding.
+	I personally use Adobe Dreamweaver, but Frontpage or any other decent HTML editor will work as well.
+	</p>
+
+	<p class="warning"><strong>WARNING!:</strong> If you mess up the formatting, these files will not work properly!</p>
+	</section>
+
+	<section>
+		<h2>Let's start with the <code>config.php</code></h2>
+		<p>Both, <code>radiodj.php</code> and <code>display.php</code> source this file for configuration so all global variales are easy to change in one place.</p>
+		<!--
+		<p>
+			<strong>1.</strong> Open it in your editor and find line 3. It should look like this:<br /> 
+			<code>date_default_timezone_set('America/New_York');</code><br />
+		</p>
+		<p>
+		In that line place your local timezone setting. The settings can be found <a href="http://php.net/manual/en/timezones.php" target="_blank">here</a>. Just find your region in the list and then it's as easy as copy/paste...<br />
+			<small>This is not necessary, if your PHP installation is properly configured. PHP 5.2 and later versions will complain, when date functions are invoked without setting default time zone.</small>
+		</p>
+		-->
+		<p>
+			<strong>1.</strong> Open <code>config.php</code> in your editor and find line 3. It should look like this:<br /> 
+			<pre>$XPWD = 'RADIODJ_NOW_PLAYING_INFO_PASSWORD';</pre>
+			Replace <code>RADIODJ_NOW_PLAYING_INFO_PASSWORD</code> with same password used in <a href="#web-export-plugin-options">Now Playing Plugin Web export options</a>.
+		</p>
+		<p>
+			<strong>2.</strong> Next, find line that looks like this:
+		<pre>$album_art_PATH = 'album_art/';</pre>
+		Change this to the path of your <code>album_art</code> folder on your web server where you store or upload album art images. This variable is used to check if album art image exists and it has to be the a local path (from PHP standpoint).</p>
+		<p>For example, if <code>radiodj.php</code> is in web server root directory <code>C:\webserver\public_html\</code> and album art images are located in <code>C:\webserver\public_html\album_art\</code>, <code>$album_art_PATH</code> should be set to either <code>$album_art_PATH = 'album_art/';</code> (relative to <code>radiodj.php</code>) or to absolute path <code>$album_art_PATH = 'C:/webserver/public_html/album_art/';</code>.</p>
+		
+		<p class="note"><strong>Note:</strong> PHP doesn't care which slash is used as directory separator, but backslash (\) is an escape character and should be used with care or escaped by another bachslash (\\).</p>
+		<p>
+			Next vairable is used in source URL for image tags: <code>&lt;img src=&quot;http://www.YOURRADIOSITE.com/album_art/{album_art_image}&quot; /&gt;</code>
+			<pre>$album_art_URL = 'http://www.YOURRADIOSITE.com/album_art/';</pre>
+			It should be set to a avalid URL where album art images can be located, but it does not have to be a full URL. You can use either full URL or it could be set to just <code>'album_art/'</code>, wich makes it relative to the .php or .html file.
+		</p>
+		<p class="note">
+			<strong>Note:</strong> To make sure you have the right URL try pasting it in your browser. If you can't open it in your browser then you either have the wrong URL or the directory (folder) is protected and can't be viewed directly. If you see a message like <code>Error 403 - Access Denies</code>, try adding an existing image file name to the URL and that image should be loaded. If it doesn't, you're doing something wrong or may have skipped the part where you had to upload/copy album art images to <code>'album_art'</code> folder.<br>
+		One tip for those of you who host your own webservers, if the domain name in your URL doesn't work, try using the IP:port combination instead. This sometimes works when the domain name doesn't.
+		</p>
+		
+		<p>
+			<strong>3.</strong> With that done, <strong>SAVE IT!</strong><br />
+		</p>
+		
+		<p>That is really all there is to editing this file to make it work.</p>
+		<p>This file is configured to update information for music, news, internet streams (like simulcast shows from online sources or audio files accessed via HTTP protocol on the web) and Variable Duration Files (VDF). If you wish to alter these, here is a list of the track types:
+			<ul>
+				<li>0 Music</li>
+				<li>1 Jingle</li>
+				<li>2 Sweeper</li>
+				<li>3 Voiceover</li>
+				<li>4 Commercial</li>
+				<li>5 Internet Stream</li>
+				<li>6 Other</li>
+				<li>7 VDF (Variable Duration File)</li>
+				<li>8 Podcast</li>
+				<li>9 Request ???</li>
+				<li>10 News</li>
+				<li>11 Playlist Event</li>
+				<li>12 FileByDate</li>
+				<li>13 NewestFromFolder</li>
+				<li>14 Teaser</li>
+			</ul>
+		</p>
+		<p>To allow data updates for tracktype of choice, simply uncomment the corresponfing line by removing two slashes (//) at the beggining of line.</p>
+		<p>Likewise, to disable data updates for specific track type, comment that line out by adding two forward slashes (//) or a hash character (#) at the beginning of the line.</p>
+
+		<p class="warning"><strong>WARNING!</strong> Again, mind your formatting! If you mess up the syntax, these files will not work properly!</p>
+		<p>Ok, enough of this, time to move on...</p>
+	</section>
+
+	<section>
+		<h2>Now for the <code>display.php</code> file</h2>
+		  <p><strong>1.</strong> Open it up in your editor and look for this in line 18:<br /><br />
+			<code>&lt;img src="http://www.YOURRADIOSITE.com/album_art/" /&gt;</code><br /><br />
+		  <strong>2.</strong> Edit this to reflect the URL of your 'album_art' folder on your webserver.</p>
+		  <strong>3.</strong> You are done with this one, <strong>SAVE IT</strong>!
+		<p>Remember, if you are hosting your own webserver and the domain name URL doesn't work, try your webserver's IP:port combination.<br />
+		  This usually will fix the problem.
+		The rest of what's in this file is basically for customizing the look of the output and it is not necessary to edit any of it at this time.</p>
+
+		<h2>On to the <code>display.css</code></h2>
+		<p>
+		It is <strong>NOT</strong> vital to edit this file at this time.<br />
+		This is a Cascading Style Sheet (.css), all it's for (for those that don't know) is to set the look and feel of the page or site. You can "play" with this one at your leisure...
+		</p>
+		<h2>And now, the <code>radiodj.txt</code> file</h2>
+		<p>If you open this file, you may find it blank.<br />
+		There is a reason for this, this is the file that RadioDJ will write to when we set up Web Export in RadioDJ.<br />
+		Leave it as is, there is nothing here to edit!<br />
+		</p>
+		
+		<p class="warning"><strong>Important Note!</strong> For this to work properly, these files <strong>MUST BE UPLOADED TO THE SAME LOCATION AND TO THE SAME DIRECTORY</strong>!!<br />
+		If you do not put these files in the same location, you will have to do more editing of them than I think you really want to do, so just keep 'em together, huh?
+		</p>
+
+		<p>Take a break here if you wish and review everything to make sure you have edited everything to your liking, then proceed to upload these five (4 excluding radiodj.txt) files to your webserver along with your 'album_art' folder, if you haven't done it already.</p>
+	</section>
+
+	<section id="web-export-plugin">
+		<h2>Setting up Web Export in RadioDJ Now playing info plugin</h2>
+		<p>Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options</span> button.
+			It should be there by default.
+		<figure>
+				<figcaption>Main RadioDJ interface</figcaption>
+				<img src="images/rdj_main.jpg" width="100%" />
+			</figure>
+
+		<figure>
+				<figcaption></figcaption>
+		</figure>
+
+		<figure>
+			<figcaption>Click the <span class="btn btn-black">Options</span> button and you will see this:</figcaption>
+			<img src="images/config.jpg" width="501" height="311" />
+		</figure>
+
+			<figure>
+				<figcaption>Click <span class="btn">PLUGINS</span> button and you will see this:</figcaption>
+				<img src="images/RDJ0.jpg" width="638" height="427" />
+			</figure>
+
+			<figure>
+				<figcaption>Double-click the highlighted item, <mark>Playing Info - Now Playing Info Exporter 4.0.0.0</mark>
+		        to open Now Playing Info options window:</figcaption>
+				<img src="images/RDJ1.jpg" width="436" height="459" />
+			</figure>
+
+			<figure id="web-export-plugin-options">
+				<figcaption>Now, switch to the 'Web Export' tab and you will see this:</figcaption>
+				<img src="images/RDJ2.jpg" width="436" height="459" />
+			</figure>
+		</p>
+
+		<p>First, make sure that the 'Custom Data' box is cleared. You won't be able to add or change the password, if the 'Custom Data' field is not empty.<br />
+			Enter whatever password that you would like in the 'Password' box and then move to the 'Custom Data' box.<br />
+			Copy this line and paste it in the 'Custom Data' box:<br />
+			
+			<code>
+			xpwd=PASSWORD<wbr />&artist=$artist$<wbr />&title=$title$<wbr />&songtype=$track-type$<wbr />&songid=$track_id$<wbr />&album=$album$<wbr />&cover=$album_cover$<wbr />&year=$year$<wbr />&rotation=$rotation_name$<wbr />&listeners=$listeners$<wbr />&duration=$duration$<wbr />&songseconds=$durationSeconds$<wbr />&catid=$subcat-id$<wbr />&genre=$genre-id$<wbr />&station=$station_name$<wbr />&slogan=$station_slogan$<wbr />&requester=$request_username$<wbr />&reqmessage=$request_message$
+			</code>
+		</p>
+		<p class="note"><strong>Note</strong> Value of Password field is used only when Custom Data is not empty and it is always sent as <code>xpwd</code> parameter. However, there is a bug in Now Playing Info plugin. Sometimes the plugin will send password as set in password field and combined title ("Artist - Title") in <code>title</code> parameter, completely ignoring the custom data field.</p>
+		
+		<p>You can shorten this if you know what you are doing, but it's highly recommended to use it as is, simply add the password you entered in the 'Password' box where it says &quot;PASSWORD&quot; in the string and then click the 'Enable' box. Also, make sure that the 'Method' box is set to POST, just like in the above image.</p>
+		
+		<p>Click 'Save' and you are done.</p>
+		<p>
+		<figure>
+			<figcaption>If you did everything correctly and RadioDJ has started playing a track after you saved Web Export settings, you can go to the URL of your 'display.php' file in your browser and you should see something like this:</figcaption>
+			<img src="images/now_playing.jpg" width="648" height="288" />
+		</figure>
+		</p>
+		
+		<p>As an example, here is the link to mine: <a href="http://www.wvridgerunners.com/radio/display.php" target="_blank">http://www.wvridgerunners.com/radio/display.php</a></p>
+		<p>And here it is in a webpage: <a href="http://www.wvridgerunners.com/requests.html" target="_blank">http://www.wvridgerunners.com/requests.html</a></p>
+		<p>If the output looks anything like what you see here, you are done!</p>
+		<p>This tutorial can also be found on my website: <a href="http://www.wvridgerunners.com/readme.html" target="_blank">http://www.wvridgerunners.com/readme.html</a></p>
+	</section>
+	
+	<section id="credits">
+		<h2>Credits</h2>
+		<p>I'd like to thank everyone who helped me with code questions and everything that I needed to put this together.</p>
+		<ul>
+			<li>
+				<em><strong>Brodephat</strong></em> - For the initial code base in these files and help putting it together.
+				</li>
+			<li>
+				<strong><em>Valdis</em></strong> - For code snippets and just generally good ideas.
+				</li>
+			<li>
+				<strong><em>AndyDeGroo</em></strong> - For code snippets and advice on how to put this together. But mainly <em>patience</em>, I'm sure I drove ya nuts there buddy. lol
+				</li>
+			<li>
+				<strong><em>Marius</em></strong> - For making such an awesome piece of software!
+			</li>
+		</ul>
+		<p>Anyone that I missed, you know who you are.., thank you so much for all each and every one of you have done to contribute to this!</p>
+	</section>
+</main>
+</body>
+</html>
