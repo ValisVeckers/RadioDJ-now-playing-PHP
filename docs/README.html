@@ -149,7 +149,7 @@
 
 	<section>
 		<h2>Let's start with the <code>config.php</code></h2>
-		<p>Both, <code>radiodj.php</code> and <code>display.php</code> source this file for configuration so all global variales are easy to change in one place.</p>
+		<p>Both, <code>radiodj.php</code> and <code>display.php</code> source this file for configuration so all global variables are easy to change in one place.</p>
 		<!--
 		<p>
 			<strong>1.</strong> Open it in your editor and find line 3. It should look like this:<br /> 
@@ -178,7 +178,7 @@
 			It should be set to a avalid URL where album art images can be located, but it does not have to be a full URL. You can use either full URL or it could be set to just <code>'album_art/'</code>, wich makes it relative to the .php or .html file.
 		</p>
 		<p class="note">
-			<strong>Note:</strong> To make sure you have the right URL try pasting it in your browser. If you can't open it in your browser then you either have the wrong URL or the directory (folder) is protected and can't be viewed directly. If you see a message like <code>Error 403 - Access Denies</code>, try adding an existing image file name to the URL and that image should be loaded. If it doesn't, you're doing something wrong or may have skipped the part where you had to upload/copy album art images to <code>'album_art'</code> folder.<br>
+			<strong>Note:</strong> To make sure you have the right URL try pasting it in your browser. If you can't open it in your browser then you either have the wrong URL or the directory (folder) is protected and can't be viewed directly. If you see ane error message like <strong>Error 403 - Access Denied</strong>, try adding an existing image file name to the URL and that image should be loaded. If it doesn't, you're doing something wrong or may have skipped the part where you had to upload/copy album art images to <code>'album_art'</code> folder.<br>
 		One tip for those of you who host your own webservers, if the domain name in your URL doesn't work, try using the IP:port combination instead. This sometimes works when the domain name doesn't.
 		</p>
 		
@@ -215,13 +215,8 @@
 
 	<section>
 		<h2>Now for the <code>display.php</code> file</h2>
-		  <p><strong>1.</strong> Open it up in your editor and look for this in line 18:<br /><br />
-			<code>&lt;img src="http://www.YOURRADIOSITE.com/album_art/" /&gt;</code><br /><br />
-		  <strong>2.</strong> Edit this to reflect the URL of your 'album_art' folder on your webserver.</p>
-		  <strong>3.</strong> You are done with this one, <strong>SAVE IT</strong>!
-		<p>Remember, if you are hosting your own webserver and the domain name URL doesn't work, try your webserver's IP:port combination.<br />
-		  This usually will fix the problem.
-		The rest of what's in this file is basically for customizing the look of the output and it is not necessary to edit any of it at this time.</p>
+		<p>It is NOT** necessary to edit this file at all, but you can do it if you know your way around basic PHP and HTML.
+		Most of what's in this file is basically for customizing the look of the output and it is not necessary to edit any of it.</p>
 
 		<h2>On to the <code>display.css</code></h2>
 		<p>

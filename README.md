@@ -40,6 +40,8 @@ To edit these files you should use [Notepad2](http://www.flos-freeware.ch/notepa
 
 ## <a name="config-php"></a>Let's start with the `config.php`
 
+Both, `radiodj.php` and `display.php` source this file for configuration so all global variables are easy to change in one place.
+
 **1.** Open `config.php` in your editor and find line 3\. It should look like this:  
 
 <pre>$XPWD = 'RADIODJ_NOW_PLAYING_INFO_PASSWORD';</pre>
@@ -62,7 +64,7 @@ Next vairable is used in source URL for image tags: `<img src="http://www.YOURRA
 
 It should be set to a avalid URL where album art images can be located, but it does not have to be a full URL. You can use either full URL or it could be set to just `'album_art/'`, wich makes it relative to the .php or .html file.
 
-**Note:** To make sure you have the right URL try pasting it in your browser. If you can't open it in your browser then you either have the wrong URL or the directory (folder) is protected and can't be viewed directly. If you see a message like `Error 403 - Access Denies`, try adding an existing image file name to the URL and that image should be loaded. If it doesn't, you're doing something wrong or may have skipped the part where you had to upload/copy album art images to `'album_art'` folder.  
+**Note:** To make sure you have the right URL try pasting it in your browser. If you can't open it in your browser then you either have the wrong URL or the directory (folder) is protected and can't be viewed directly. If you see a message like `Error 403 - Access Denied`, try adding an existing image file name to the URL and that image should be loaded. If it doesn't, you're doing something wrong or may have skipped the part where you had to upload/copy album art images to `'album_art'` folder.  
 One tip for those of you who host your own webservers, if the domain name in your URL doesn't work, try using the IP:port combination instead. This sometimes works when the domain name doesn't.
 
 **3.** With that done, **SAVE IT!**  
@@ -97,16 +99,8 @@ Ok, enough of this, time to move on...
 
 ## <a name="display-php"></a>Now for the `display.php` file
 
-**1.** Open it up in your editor and look for this in line 18:  
+It is **NOT** necessary to edit this file at all, but you can do it if you know your way around basic PHP and HTML.
 
-`<img src="http://www.YOURRADIOSITE.com/album_art/" />`  
-
-**2.** Edit this to reflect the URL of your 'album_art' folder on your webserver.
-
-**3.** You are done with this one, **SAVE IT**!
-
-Remember, if you are hosting your own webserver and the domain name URL doesn't work, try your webserver's IP:port combination.  
-This usually will fix the problem. The rest of what's in this file is basically for customizing the look of the output and it is not necessary to edit any of it at this time.
 
 ## On to the `display.css`
 
@@ -134,11 +128,7 @@ Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options<
 
 <figcaption>Main RadioDJ interface</figcaption>
 
-![](docs/images/rdj_main.jpg)</figure>
-
-<figure>
-
-<figcaption></figcaption>
+![rdj_main](docs/images/rdj_main.jpg)
 
 </figure>
 
@@ -146,30 +136,38 @@ Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options<
 
 <figcaption>Click the <span class="btn btn-black">Options</span> button and you will see this:</figcaption>
 
-![](docs/images/config.jpg)</figure>
+![config](docs/images/config.jpg)
+
+</figure>
 
 <figure>
 
 <figcaption>Click <span class="btn">PLUGINS</span> button and you will see this:</figcaption>
 
-![](docs/images/RDJ0.jpg)</figure>
+![plugins](docs/images/RDJ0.jpg)
+
+</figure>
 
 <figure>
 
 <figcaption>Double-click the highlighted item, <mark>Playing Info - Now Playing Info Exporter 4.0.0.0</mark> to open Now Playing Info options window:</figcaption>
 
-![](docs/images/RDJ1.jpg)</figure>
+![Now Playing Info options](docs/images/RDJ1.jpg)
+
+</figure>
 
 <figure id="web-export-plugin-options">
 
 <figcaption>Now, switch to the 'Web Export' tab and you will see this:</figcaption>
 
-![](docs/images/RDJ2.jpg)</figure>
+![Web Export tab](docs/images/RDJ2.jpg)
+
+</figure>
 
 First, make sure that the 'Custom Data' box is cleared. You won't be able to add or change the password, if the 'Custom Data' field is not empty.  
 Enter whatever password that you would like in the 'Password' box and then move to the 'Custom Data' box.  
 Copy this line and paste it in the 'Custom Data' box:  
-`xpwd=PASSWORD<wbr>&artist=$artist$<wbr>&title=$title$<wbr>&songtype=$track-type$<wbr>&songid=$track_id$<wbr>&album=$album$<wbr>&cover=$album_cover$<wbr>&year=$year$<wbr>&rotation=$rotation_name$<wbr>&listeners=$listeners$<wbr>&duration=$duration$<wbr>&songseconds=$durationSeconds$<wbr>&catid=$subcat-id$<wbr>&genre=$genre-id$<wbr>&station=$station_name$<wbr>&slogan=$station_slogan$<wbr>&requester=$request_username$<wbr>&reqmessage=$request_message
+`xpwd=PASSWORD<wbr>&artist=$artist$<wbr>&title=$title$<wbr>&songtype=$track-type$<wbr>&songid=$track_id$<wbr>&album=$album$<wbr>&cover=$album_cover$<wbr>&year=$year$<wbr>&rotation=$rotation_name$<wbr>&listeners=$listeners$<wbr>&duration=$duration$<wbr>&songseconds=$durationSeconds$<wbr>&catid=$subcat-id$<wbr>&genre=$genre-id$<wbr>&station=$station_name$<wbr>&slogan=$station_slogan$<wbr>&requester=$request_username$<wbr>&reqmessage=$request_message`
 
 <a name="web-export-plugin"></a>
 **Note** Value of Password field is used only when Custom Data is not empty and it is always sent as `xpwd` parameter. However, there is a bug in Now Playing Info plugin. Sometimes the plugin will send password as set in password field and combined title in `title` parameter, completely ignoring the custom data field.
@@ -182,7 +180,7 @@ Click 'Save' and you are done.
 
 <figcaption>If you did everything correctly and RadioDJ has started playing a track after you saved Web Export settings, you can go to the URL of your 'display.php' file in your browser and you should see something like this:</figcaption>
 
-![](docs/images/now_playing.jpg)</figure>
+![now_playing](docs/images/now_playing.jpg)</figure>
 
 As an example, here is the link to mine: [http://www.wvridgerunners.com/radio/display.php](http://www.wvridgerunners.com/radio/display.php)
 
