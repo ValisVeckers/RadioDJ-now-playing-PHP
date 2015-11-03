@@ -128,7 +128,7 @@ Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options<
 
 <figcaption>Main RadioDJ interface</figcaption>
 
-![rdj_main](docs/images/rdj_main.jpg)
+![rdj_main](https://raw.githubusercontent.com/ValisVeckers/RadioDJ-now-playing-PHP/master/docs/images/rdj_main.jpg)
 
 </figure>
 
@@ -136,7 +136,7 @@ Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options<
 
 <figcaption>Click the <span class="btn btn-black">Options</span> button and you will see this:</figcaption>
 
-![config](docs/images/config.jpg)
+![config](https://raw.githubusercontent.com/ValisVeckers/RadioDJ-now-playing-PHP/master/docs/images/config.jpg)
 
 </figure>
 
@@ -144,7 +144,7 @@ Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options<
 
 <figcaption>Click <span class="btn">PLUGINS</span> button and you will see this:</figcaption>
 
-![plugins](docs/images/RDJ0.jpg)
+![plugins](https://raw.githubusercontent.com/ValisVeckers/RadioDJ-now-playing-PHP/master/docs/images/RDJ0.jpg)
 
 </figure>
 
@@ -152,7 +152,7 @@ Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options<
 
 <figcaption>Double-click the highlighted item, <mark>Playing Info - Now Playing Info Exporter 4.0.0.0</mark> to open Now Playing Info options window:</figcaption>
 
-![Now Playing Info options](docs/images/RDJ1.jpg)
+![Now Playing Info options](https://raw.githubusercontent.com/ValisVeckers/RadioDJ-now-playing-PHP/master/docs/images/RDJ1.jpg)
 
 </figure>
 
@@ -160,7 +160,7 @@ Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options<
 
 <figcaption>Now, switch to the 'Web Export' tab and you will see this:</figcaption>
 
-![Web Export tab](docs/images/RDJ2.jpg)
+![Web Export tab](https://raw.githubusercontent.com/ValisVeckers/RadioDJ-now-playing-PHP/master/docs/images/RDJ2.jpg)
 
 </figure>
 
@@ -180,7 +180,7 @@ Click 'Save' and you are done.
 
 <figcaption>If you did everything correctly and RadioDJ has started playing a track after you saved Web Export settings, you can go to the URL of your 'display.php' file in your browser and you should see something like this:</figcaption>
 
-![now_playing](docs/images/now_playing.jpg)</figure>
+![now_playing](https://raw.githubusercontent.com/ValisVeckers/RadioDJ-now-playing-PHP/master/docs/images/now_playing.jpg)</figure>
 
 As an example, here is the link to mine: [http://www.wvridgerunners.com/radio/display.php](http://www.wvridgerunners.com/radio/display.php)
 
