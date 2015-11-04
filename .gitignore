@@ -26,6 +26,8 @@ $RECYCLE.BIN/
 # Album art directory
 album_art/
 
+radiodj.txt
+
 # =========================
 # Operating System Files
 # =========================
@@ -50,3 +52,4 @@ album_art/
 Network Trash Folder
 Temporary Items
 .apdisk
+radiodj.txt
