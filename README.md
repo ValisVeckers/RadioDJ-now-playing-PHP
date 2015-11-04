@@ -122,54 +122,37 @@ Take a break here if you wish and review everything to make sure you have edited
 
 ## <a name="web-export-plugin"></a>Setting up Web Export in RadioDJ Now playing info plugin
 
-Open RadioDJ and look to the bottom for the <span class="btn btn-black">Options</span> button. It should be there by default.
+Open RadioDJ and look to the bottom for the <button>OPTIONS</button> button. It should be there by default.
 
-<figure>
+Main RadioDJ interface
 
-<figcaption>Main RadioDJ interface</figcaption>
-
-![](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/rdj_main.jpg?raw=true)
-
-</figure>
-
-<figure>
-
-<figcaption>Click the <button>Options</button> button and you will see this:</figcaption>
+![Main RadioDJ interface](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/rdj_main.jpg?raw=true "Main RadioDJ interface")
 
 
-![](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/config.jpg?raw=true)
+Click the <button>OPTIONS</button> button and you will see this:
+
+![RadioDJ Configuration window](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/config.jpg?raw=true "RadioDJ Configuration window")
 
 
-</figure>
+Click <button>PLUGINS</button> button and you will see this:
 
-<figure>
+![RadioDJ Plugins window](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/RDJ0.jpg?raw=true "RadioDJ Plugins window")
 
-<figcaption>Click <button>PLUGINS</button> button and you will see this:</figcaption>
 
-![](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/RDJ0.jpg?raw=true)
+Double-click the highlighted item, <mark>Playing Info - Now Playing Info Exporter 4.0.0.0</mark> to open Now Playing Info options window:
 
-</figure>
+![Playing Info - Now Playing Info Exporter 4.0.0.0](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/RDJ1.jpg?raw=true "Playing Info - Now Playing Info Exporter 4.0.0.0")
 
-<figure>
+<a name="web-export-plugin-options"></a>
+Now, switch to the 'Web Export' tab and you will see this:
 
-<figcaption>Double-click the highlighted item, <mark>Playing Info - Now Playing Info Exporter 4.0.0.0</mark> to open Now Playing Info options window:</figcaption>
+![Web Export options tab](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/RDJ2.jpg?raw=true "Web Export options tab")
 
-![](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/RDJ1.jpg?raw=true)
-
-</figure>
-
-<figure id="web-export-plugin-options">
-
-<figcaption>Now, switch to the 'Web Export' tab and you will see this:</figcaption>
-
-![](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/RDJ2.jpg?raw=true)
-
-</figure>
 
 First, make sure that the 'Custom Data' box is cleared. You won't be able to add or change the password, if the 'Custom Data' field is not empty.  
 Enter whatever password that you would like in the 'Password' box and then move to the 'Custom Data' box.  
 Copy this line and paste it in the 'Custom Data' box:  
-`xpwd=PASSWORD<wbr>&artist=$artist$<wbr>&title=$title$<wbr>&songtype=$track-type$<wbr>&songid=$track_id$<wbr>&album=$album$<wbr>&cover=$album_cover$<wbr>&year=$year$<wbr>&rotation=$rotation_name$<wbr>&listeners=$listeners$<wbr>&duration=$duration$<wbr>&songseconds=$durationSeconds$<wbr>&catid=$subcat-id$<wbr>&genre=$genre-id$<wbr>&station=$station_name$<wbr>&slogan=$station_slogan$<wbr>&requester=$request_username$<wbr>&reqmessage=$request_message`
+`xpwd=PASSWORD&artist=$artist$&title=$title$&songtype=$track-type$&songid=$track_id$&album=$album$&cover=$album_cover$&year=$year$&rotation=$rotation_name$&listeners=$listeners$&duration=$duration$&songseconds=$durationSeconds$&catid=$subcat-id$&genre=$genre-id$&station=$station_name$&slogan=$station_slogan$&requester=$request_username$&reqmessage=$request_message`
 
 <a name="web-export-plugin"></a>
 **Note** Value of Password field is used only when Custom Data is not empty and it is always sent as `xpwd` parameter. However, there is a bug in Now Playing Info plugin. Sometimes the plugin will send password as set in password field and combined title in `title` parameter, completely ignoring the custom data field.
@@ -178,19 +161,18 @@ You can shorten this if you know what you are doing, but I highly recommend that
 
 Click 'Save' and you are done.
 
-<figure>
+If you did everything correctly and RadioDJ has started playing a track after you saved Web Export settings, you can go to the URL of your 'display.php' file in your browser and you should see something like this:
 
-<figcaption>If you did everything correctly and RadioDJ has started playing a track after you saved Web Export settings, you can go to the URL of your 'display.php' file in your browser and you should see something like this:</figcaption>
+![display.php should nook like this](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/now_playing.jpg?raw=true "display.php should nook like this")
 
-![](https://github.com/ValisVeckers/RadioDJ-now-playing-PHP/blob/master/docs/images/now_playing.jpg?raw=true)</figure>
 
-As an example, here is the link to mine: [http://www.wvridgerunners.com/radio/display.php](http://www.wvridgerunners.com/radio/display.php)
+As an example, here is the link to Capt_Fuzzy's display.php: [http://www.wvridgerunners.com/radio/display.php](http://www.wvridgerunners.com/radio/display.php)
 
 And here it is in a webpage: [http://www.wvridgerunners.com/requests.html](http://www.wvridgerunners.com/requests.html)
 
 If the output looks anything like what you see here, you are done!
 
-This tutorial can also be found on my website: [http://www.wvridgerunners.com/readme.html](http://www.wvridgerunners.com/readme.html)
+This tutorial can also be found on Capt_Fuzzy website: [http://www.wvridgerunners.com/readme.html](http://www.wvridgerunners.com/readme.html)
 
 
 
@@ -201,7 +183,7 @@ I'd like to thank everyone who helped me with code questions and everything that
 *   **_Brodephat_** - For the initial code base in these files and help putting it together.
 *   **_Valdis_** - For code snippets and just generally good ideas.
 *   **_AndyDeGroo_** - For code snippets and advice on how to put this together. But mainly _patience_, I'm sure I drove ya nuts there buddy. lol
-*   **_Marius_** - For making such an awesome piece of software!
+*   **_Marius_** - For making such an [awesome piece of software](http://www.radiodj.ro/)!
 
 Anyone that I missed, you know who you are.., thank you so much for all each and every one of you have done to contribute to this!
 
