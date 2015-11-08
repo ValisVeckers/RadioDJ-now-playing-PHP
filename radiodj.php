@@ -10,16 +10,16 @@ if( $_SERVER['REQUEST_METHOD'] != 'POST' ) {
 }
 
 /**
- * Shorthand function for accessign $_POST variables
+ * Shorthand function for accessing $_POST variables
  */
-function postvar( $var ) {
-	return isset($_POST[$var]) ? $_POST[$var] : null;
+function postvar( $var, $default = null ) {
+	return isset($_POST[$var]) ? $_POST[$var] : $default;
 }
 
 if( postvar('xpwd') == $XPWD ) {
 	
-	if ( !empty($allowed_track_types) && !in_array(postvar('tracktype'), $allowed_track_types) ) {
-		exit('Track type '.postvar('tracktype').' not allowed');
+	if ( !empty($allowed_track_types) && !in_array(postvar('songtype', -1), $allowed_track_types) ) {
+		exit('Track type '.postvar('songtype').' not allowed');
 	}
 	
 	$album_art = postvar('cover');
